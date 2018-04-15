@@ -1,36 +1,71 @@
 <!doctype html>
-<html>
+<html lang="en">
 <head>
-    <meta charset="utf-8">
-    <title>这是我的第一个网页</title>
-    <meta name="keywords"   content="裤子">
-     <meta name="description  "  content="这是一个卖裤子的网站" >
+    <meta charset="UTF-8">
+    <title>title</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+    a{
+        text-decoration:none;
+    }
+        li{
+            list-style: none;
+        }
 
+        #nav{
+            width: 409px;
+            height:30px;
+        }
+        #nav li{
+            width: 100px;
+            height: 30px;
+            background: #ff0000;
+            float:left;
+            margin-right:3px;
+        }
+        #nav .last{
+            margin-right:0;
+        }
+        #nav a{
+            color:#fff;
+            text-align:center;
+            width: 100%;
+            height: 100%;
+             float: left;
+            line-height: 30px;
+        }
+        #nav a:hover{
+            background:orange;
+
+        }
+        #title{
+            background:#cccccc;
+        }
+
+
+
+    </style>
 </head>
 <body>
-    <h1>这是h1标签</h1>
-    <h2>这是h2标签</h2>
-    <h3>这是h3标签</h3>
-    <h4>这是h4标签</h4>
-    <h5>这是h5标签</h5>
-    <h6>这是h6标签</h6>
-    <a herf="http//:www.baidu.com"  target="blank">百度一下</a>
-    <a herf="http//:www.taobao.com" target="blank">淘宝</a>
-    <o1>
-        <li>A</li>
-        <li>B</li>
-        <li>C</li>
-        <li>D</li>
-    </o1>
-    <ul>
-        <li>A</li>
-        <li>B</li>
-        <li>C</li>
-        <li>D</li>
-    </ul>
-    <img    src="lin.jpg"   alt="图片加载失败"    title="这是一张自拍".>
+        <ul id="nav">
+            <li>
+                <a href="">link one</a>
+            </li>
+            <li>
+                <a href="">link two</a>
+            </li>
+            <li>
+                <a href="">link three</a>
+            </li>
+            <li class ="last"  >
+                <a href="">link four</a>
+            </li>
 
+        </ul>
+        <h1 id="title">这是一个标题</h1>
 
 </body>
-
 </html>
