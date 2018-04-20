@@ -2,70 +2,116 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>title</title>
+    <title>Document</title>
+    <meta name="keyswords" content="裤子，很多裤子，很多很多裤子">
+    <meta name="description" content="这是一个卖裤子的网站">
+
     <style>
-        *{
-            margin:0;
-            padding:0;
-        }
-    a{
-        text-decoration:none;
-    }
-        li{
-            list-style: none;
-        }
-
         #nav{
-            width: 409px;
-            height:30px;
-        }
-        #nav li{
-            width: 100px;
-            height: 30px;
+            width: 200px;
+            height: 200px;
             background: #ff0000;
-            float:left;
-            margin-right:3px;
         }
-        #nav .last{
-            margin-right:0;
-        }
-        #nav a{
-            color:#fff;
-            text-align:center;
-            width: 100%;
-            height: 100%;
-             float: left;
-            line-height: 30px;
-        }
-        #nav a:hover{
-            background:orange;
-
-        }
-        #title{
-            background:#cccccc;
-        }
-
-
-
     </style>
 </head>
 <body>
-        <ul id="nav">
-            <li>
-                <a href="">link one</a>
-            </li>
-            <li>
-                <a href="">link two</a>
-            </li>
-            <li>
-                <a href="">link three</a>
-            </li>
-            <li class ="last"  >
-                <a href="">link four</a>
-            </li>
-
+<h1>这是h1标签</h1>
+<h2>这是h2标签</h2>
+<h3>这是h3标签</h3>
+<h4>这是h4标签</h4>
+<h5>这是h5标签</h5>
+<h6>这是h6标签</h6>
+<a href="http://www.baidu.com" target="blank">百度一下</a>
+<a href="http://www.taobao.com">淘宝</a>
+<ol>
+    <li>A</li>
+    <li>B</li>
+    <li>C</li>
+    <li>D</li>
+    <ol>
+        <ul>
+            <li>A</li>
+            <li>B</li>
+            <li>C</li>
+            <li>D</li>
         </ul>
-        <h1 id="title">这是一个标题</h1>
-
+        <img src="lin.jpg" alt="图片加载失败" title="这是一张自拍">
+        <table border="2" id="nav">
+            <tr>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+            </tr>
+            </table>
+        <p>
+            <span>ppppp</span>
+        </p>
+        <hr>
+        <form action="">
+            <lable for="username">用户名</lable>
+            <input type="uesernam" >
+            <br>
+            <lable for="password">密码</lable>
+            <input type="password">
+            <br>
+            <lable for="sex">性别</lable>
+            <input type="radio" name="sex">男
+            <input type="radio" name="sex">女
+            <br>
+            <select name="city" id="city">
+                <option value="">北京</option>
+                <option value="">上海</option>
+            </select>
+            <br>
+            <input type="submit">
+            <input type="reset">
+        </form>
+        <div>唯创&nbsp;&nbsp;&nbsp;网讯</div>
+        <div>&lt;&gt;</div>
+        。sheme定义因特网服务类型最常见http
+        。host定义域主机默认www
+        。domain定义因特网域名比如baidu
+        。port定义主机上端口号http默认端口号80
+        。path文件路径
+        http和https区别：安全协议
+        CSS:
+        <!-- 像素   -->
+        内联样式：
+        <div  style="width: 200px;   height: 200px;   background: #00ffff;"></div>
+        外部样式：
+        <新建一个stylesheet文件link>
+            <link rel="stylesheet" href="style.css">放在head与style之间
+            后代选择器  #div1 div{}
+            分组选择器  #p1,#h3{} 某些元素使他们具有相同的性质
+            子代选择器  #div>div{}  选亲儿子  IE678有兼容性
+            多类选择器div.aa.bb{}浏览器从右往左查找为了提高查找效率
+            权重值：   ！important>内联样式>id>class>标签选择器
+            权重值可以叠加
+            例：
+            a.b.c.d.e.d.e.f.h.i.j.div{<bg #f00;}
+           #div{bg#0f0}
+            结果：绿的
+      权重值相同的情况下：.aa{bg#red}  .bb{bg#green} 结果跟顺序有关显示后面的颜色
+       盒模型：
+              w3c标准盒模型
+              宽度="内容的宽度"
+               高度="内容的高度"
+          内边距：边框和内容之间的距离
+          外边距：边框和外部间距离
+          padding:   50px 40px  ;上下左右
+                      50px 40px  30px;上右下左边和右边一样
+                      顺时针排序
+         背景图片：background-img:url(lin.jpg); no-repeat;repeat-x;repeat-y;right-bottom右下；
 </body>
 </html>
