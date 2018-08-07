@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+            <!-- <template v-for="obj in arr">
+                    <h2>{{obj.name}}</h2>
+                    <p>{{obj.description}}</p>
+                </template> -->
+               <weichuang></weichuang>
+               <weichuang></weichuang>
+                
+    </div>
+    <div id="app2">
+        <demo title="1111" content="1431243">
+                <div slot="slot1"> 
+                        <h2>标题</h2>
+                       <p>文件</p> 
+                   </div>
+        </demo>
+        <demo title="22222" content="4674567" >
+            <div slot="slot1"> 
+                 <h2>标题</h2>
+                <p>文件</p>
+            </div>
+               
+        </demo>
+    </div>
+    <script src="vue.js"></script>
+    <script type="text/x-template" id="tem">
+        <div>
+                <h2>{{title}}</h2>
+                <p>
+                    <slot name="slot1"></slot>
+                </p>                  <!--必须在一个根元素下-->
+        </div>
+   
+    </script>
+    <script>
+        // Vue.component('weichuang',{
+        //     template:'<div><h2>标题</h2><p>文字</p></div>'
+        // })
+     let vm = new Vue({
+         el:"#app2",
+         data:{
+             arr:[
+                 {
+                     name:'1111',
+                     description:'asdffasdf'
+                 },
+                 {
+                     name:'2222',
+                     description:'asdfasdfsdffdsfsdfd'
+                 }
+             ]
+         },
+         components:{
+             demo:{
+                template:'#tem',
+                props:['title','content']
+             }
+            
+         }
+     })
+    
+    
+    
+    </script>
+</body>
+</html>

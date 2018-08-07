@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    .box{
+        width: 400px;
+        height: 400px;
+        background: #cccccc;
+    }
+    .tit{
+        border:1px solid #ffffff;
+        height: 30px;
+        line-height: 30px;
+    }
+   .close{
+       float:right;
+       margin-right:10px;
+   }
+    
+    </style>
+</head>
+<body>
+    <div id="app">
+        <button @click="showLogin=true ;showRister=false ">登录</button>
+        <button @click="showRister=true ;showLogin=false">注册</button>
+       <demo title="登录" v-if="showLogin" @close="fn">
+           用户名：<input type="text">
+           密码：<input type="password">  
+       </demo>
+       <!-- <demo v-if="showRister"></demo> -->
+    </div>
+    <script src="vue.js"></script>
+    <script type="text/x-template" id="test">
+        <div class="box">
+            <div class="tit">
+                <span>{{title}}</span>
+                <span class="close" @click="$emit('close','aaa')">X</span>
+            </div>
+            <div class="container">
+                <slot></slot>
+            </div>
+        </div>
+    
+    
+    </script>
+    <script>
+    let vm = new Vue({
+        el:"#app",
+        data:{
+            showLogin:false,
+            showRister:false
+        },
+        methods:{
+            fn(val){
+                console.log('aaa');
+            }
+        },
+        components:{
+            demo:{
+                template:"#test",
+                props:['title']
+            }
+        }
+    })
+    
+    
+    
+    
+    </script>
+</body>
+</html>
