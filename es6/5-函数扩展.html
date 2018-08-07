@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //函数中this  执行时的this  箭头函数中this  声明时的this
+        //到父作用域找
+        //箭头不能写构造函数
+        //在箭头函数中不允许使用arguement
+        var person = {
+            name: 'zs',
+            age: 10,
+            say: () => {
+                aa = () => {
+                    console.log(this);
+                }
+                aa();
+            }
+        }
+        person.say();
+    </script>
+</body>
+
+</html>
