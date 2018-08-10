@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+    .aa{
+        background: #ff0000;
+    }
+    .bb{
+        background: #00ff00;
+    }
+</style>
+<body>
+    <div id="app">
+            <h2 v-bind:id="msg">
+                {{msg}}
+            </h2>
+            <p :class="{aa:isA,bb:isB}" @click="change()">asdad</p>
+
+    </div>
+    <script src="vue.js"></script>
+    <script>
+        new Vue({
+            el:"#app",
+            data:{
+                msg:"aaa",
+                isA:false,
+                isB:true
+            },
+            methods:{
+                change(){
+                        this.isA=!this.isA;
+                        this.isB=!this.isB;
+                }
+            }
+        })
+    </script>
+</body>
+</html>
